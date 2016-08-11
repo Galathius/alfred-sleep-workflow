@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string></string>
+	<key>connections</key>
+	<dict>
+		<key>4B15E677-3E90-4686-A9EE-DA297868420D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>72BE6C9E-5697-4F94-AA3C-7B1017F317A6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Ilya Kamenko</string>
+	<key>description</key>
+	<string>Sleep timer</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Sleep</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>(caffeinate -t "$(({query}*60))" &amp;) &amp;&amp; (sleep "$(({query}*60))") &amp;&amp; pmset sleepnow</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>72BE6C9E-5697-4F94-AA3C-7B1017F317A6</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>sleep</string>
+				<key>subtext</key>
+				<string>Sleep after {query} minutes</string>
+				<key>text</key>
+				<string>Sleep</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4B15E677-3E90-4686-A9EE-DA297868420D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>4B15E677-3E90-4686-A9EE-DA297868420D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>72BE6C9E-5697-4F94-AA3C-7B1017F317A6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>https://github.com/Galathius</string>
+</dict>
+</plist>
