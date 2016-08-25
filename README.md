@@ -10,7 +10,7 @@ To install the Tea Timer workflow, double click on ``Sleep.alfredworkflow`` or d
 Open Alfred Prefs (Cmd + ,) and go to the **Workflow** tab to confirm the extension installed.`
 
 # Download
-[Sleep Workflow](http://www.packal.org/workflow/tea-timer)
+[Sleep Workflow](http://www.packal.org/workflow/sleep)
 
 # Version History
 
