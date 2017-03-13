@@ -21,3 +21,7 @@ Open Alfred Prefs (Cmd + ,) and go to the **Workflow** tab to confirm the extens
 ## 1.1 - August 12, 2016
 
 - Commit: Add sleeps and sleeph commands
+
+## 1.2 - March 13, 2017
+
+- Commit: Add sleepa (abort sleep script) command

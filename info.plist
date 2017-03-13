@@ -47,6 +47,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>F888BECA-F1B6-40A3-AF06-FB50D65E4A93</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C037FF1C-E92D-4116-9FF3-E46FC1489B69</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Ilya Kamenko</string>
@@ -105,6 +118,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>sleep</string>
+				<key>subtext</key>
+				<string>Sleep in {query} minutes</string>
+				<key>text</key>
+				<string>sleep</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4B15E677-3E90-4686-A9EE-DA297868420D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -128,23 +162,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>(caffeinate -t "$(({query}))") &amp;&amp; pmset sleepnow</string>
+				<key>scriptargtype</key>
 				<integer>0</integer>
-				<key>keyword</key>
-				<string>sleep</string>
-				<key>subtext</key>
-				<string>Sleep in {query} minutes</string>
-				<key>text</key>
-				<string>sleep</string>
-				<key>withspace</key>
-				<true/>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>4B15E677-3E90-4686-A9EE-DA297868420D</string>
+			<string>F5A8964F-738C-421A-966F-BD833CA59D9E</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -175,7 +211,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>(caffeinate -t "$(({query}))") &amp;&amp; pmset sleepnow</string>
+				<string>killall caffeinate</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -186,9 +222,30 @@
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>F5A8964F-738C-421A-966F-BD833CA59D9E</string>
+			<string>C037FF1C-E92D-4116-9FF3-E46FC1489B69</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>sleepa</string>
+				<key>subtext</key>
+				<string>Abort sleep script</string>
+				<key>text</key>
+				<string>sleepa</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>F888BECA-F1B6-40A3-AF06-FB50D65E4A93</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -216,6 +273,13 @@
 			<key>ypos</key>
 			<integer>140</integer>
 		</dict>
+		<key>C037FF1C-E92D-4116-9FF3-E46FC1489B69</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<integer>390</integer>
+		</dict>
 		<key>C5C10FC2-ABD6-4BB1-AB1F-AF7E4CAFCFA2</key>
 		<dict>
 			<key>xpos</key>
@@ -237,9 +301,16 @@
 			<key>ypos</key>
 			<integer>270</integer>
 		</dict>
+		<key>F888BECA-F1B6-40A3-AF06-FB50D65E4A93</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<integer>390</integer>
+		</dict>
 	</dict>
 	<key>version</key>
-	<string>1.1</string>
+	<string>1.2</string>
 	<key>webaddress</key>
 	<string>https://github.com/Galathius/alfred-sleep-workflow</string>
 </dict>
